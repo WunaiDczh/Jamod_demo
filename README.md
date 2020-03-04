@@ -1,2 +1,2 @@
 # Jamod_demo
- Jamod实现Modbus
+ Jamod实现Modbus协议的Master一端向Slave发送请求，注意需要运行在32位的JDK和EClipse上，JAVAX.com不支持64位
