@@ -7,7 +7,7 @@ import net.wimpi.modbus.io.*;
 import net.wimpi.modbus.net.*;
 import net.wimpi.modbus.util.*;
  
-public class SerialAITest {
+public class FC3 {
 
   public static void main(String[] args) {
     try {
@@ -21,7 +21,7 @@ public class SerialAITest {
     	/* Variables for storing the parameters */
     	String portname= "COM3"; //the name of the serial port to be used
     	int unitid = 2; //the unit identifier we will be talking to
-    	int ref = 0; //the reference number of the register to read from.  寄存器地址
+    	int ref = 0; //the reference number of the register to read from.  锟侥达拷锟斤拷锟斤拷址
     	int count = 10; //the count of IR's to read
     	//int repeat = 5; //a loop for repeating the transaction
     	
@@ -31,7 +31,7 @@ public class SerialAITest {
     	//2. Set master identifier
     	//ModbusCoupler.createModbusCoupler(null);
     
-    	ModbusCoupler.getReference().setUnitID(2);      
+    	ModbusCoupler.getReference().setUnitID(1);      
 
     	//3. Setup serial parameters
     	SerialParameters params = new SerialParameters();
@@ -66,8 +66,8 @@ public class SerialAITest {
     	int k = 0;
     	
     	  trans.execute();
-    	 // res = (ReadInputRegistersResponse) trans.getResponse();//一直等回应了
-    	  res = (ReadCoilsResponse) trans.getResponse();//一直等回应了
+
+    	  res = (ReadCoilsResponse) trans.getResponse();
     	 
     	  
     	
